@@ -1,11 +1,11 @@
-import { NavbarContainer, NavigationLink } from "./styled";
+import { NavbarContainer, NavigationLink } from './styled';
 
 export const NavigationBar = () => {
   const navLinks = [
-    { href: "#", text: "Home" },
-    { href: "#", text: "Login" },
-    { href: "#", text: "About" },
-    { href: "#", text: "Contact" },
+    { href: '#', text: 'Home' },
+    { href: '#', text: 'Login' },
+    { href: '#', text: 'About' },
+    { href: '#', text: 'Contact' },
   ];
   return (
     <NavbarContainer>
