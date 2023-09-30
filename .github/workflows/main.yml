@@ -41,5 +41,5 @@ jobs:
         run: npm run style:all
         
       - name: Make Prettier checks
-        run: npm make-pretty
+        run: npm run make-pretty
 
