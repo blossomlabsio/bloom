@@ -40,8 +40,6 @@ jobs:
       - name: Run code style check
         run: npm run style:all
         
-      - name: Prettier
-        run: npm run format
-        
-      - name: Lint
-        run: npm run lint
+      - name: Make Prettier checks
+        run: npm make-pretty
+
