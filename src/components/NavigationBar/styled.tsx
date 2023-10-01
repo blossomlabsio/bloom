@@ -7,7 +7,6 @@ export const NavbarContainer = styled.nav`
   align-items: center;
   padding: 0.5rem 0;
   height: 3rem;
-
   @media (max-width: 768px) {
     height: 2.5rem;
   }
