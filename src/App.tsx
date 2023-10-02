@@ -1,12 +1,12 @@
 import { Footer } from './components/Footer/main';
 import { NavigationBar } from './components/NavigationBar/main';
 import './App.css';
-import { BloomMain } from './components/BloomMain/main';
+import { LandingPage } from './components/LandingPage/main';
 function App() {
   return (
     <div>
       <NavigationBar />
-      <BloomMain />
+      <LandingPage />
       <Footer />
     </div>
   );
