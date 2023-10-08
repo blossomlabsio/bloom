@@ -1,4 +1,5 @@
-import { NavbarContainer, NavigationLink } from './styled';
+import { NavbarContainer, NavigationLink, NavItem, NavList } from './styled';
+import Logo from '../Logo/main';
 
 export const NavigationBar = () => {
   const navLinks = [
@@ -9,11 +10,16 @@ export const NavigationBar = () => {
   ];
   return (
     <NavbarContainer>
-      {navLinks.map((link, index) => (
-        <NavigationLink key={index} href={link.href}>
-          {link.text}
-        </NavigationLink>
-      ))}
+      <Logo src="https://i.ibb.co/2dBJqd6/4388667.png" alt="bloom-logo" />
+      <NavList>
+        {navLinks.map((link, index) => (
+          <NavItem key={index}>
+            <NavigationLink key={index} href={link.href}>
+              {link.text}
+            </NavigationLink>
+          </NavItem>
+        ))}
+      </NavList>
     </NavbarContainer>
   );
 };
