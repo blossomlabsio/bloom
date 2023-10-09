@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const NavbarContainer = styled.nav`
   background-color: #001d3d;
@@ -28,9 +29,18 @@ export const NavList = styled.ul`
 `;
 export const NavItem = styled.li`
   margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  margin: 0 20px;
+  transition: color 0.3s ease-in-out;
+
+  &:hover {
+    color: #ffc300;
+  }
 `;
 
-export const NavigationLink = styled.a`
+export const NavigationLink = styled(Link)`
   color: #fff;
   text-decoration: none;
   font-size: 18px;
