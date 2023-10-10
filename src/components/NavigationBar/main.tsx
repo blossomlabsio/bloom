@@ -3,10 +3,10 @@ import Logo from '../Logo/main';
 
 export const NavigationBar = () => {
   const navLinks = [
-    { href: '#', text: 'Home' },
-    { href: '#', text: 'Login' },
-    { href: '#', text: 'About' },
-    { href: '#', text: 'Contact' },
+    { route: '/', text: 'Home' },
+    { route: '/about', text: 'About' },
+    { route: '/contact', text: 'Contact' },
+    { route: '/login', text: 'Login' },
   ];
   return (
     <NavbarContainer>
@@ -14,9 +14,7 @@ export const NavigationBar = () => {
       <NavList>
         {navLinks.map((link, index) => (
           <NavItem key={index}>
-            <NavigationLink key={index} href={link.href}>
-              {link.text}
-            </NavigationLink>
+            <NavigationLink to={link.route}>{link.text}</NavigationLink>
           </NavItem>
         ))}
       </NavList>

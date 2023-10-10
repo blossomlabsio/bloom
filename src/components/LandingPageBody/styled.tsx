@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const LandingPageComponent = styled.main`
+export const LandingPageBodyComponent = styled.main`
   background-color: white;
   color: #333;
   text-align: center;
