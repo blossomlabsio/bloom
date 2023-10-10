@@ -1,0 +1,17 @@
+#environments
+node_modules/
+.env
+
+#code stuff
+.pretierrc
+.gitignore
+.github
+.git
+.README.md
+
+#packages
+package-lock.json
+
+#LICENSE
+LICENSE
+
