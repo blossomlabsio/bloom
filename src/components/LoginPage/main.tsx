@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { Button, Input, LoginContainer } from './styled';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const client = axios.create({
-  baseURL: process.env.REACT_APP_BASE_URL,
+  baseURL: process.env.REACT_APP_ENTER_BACKEND_IP,
 });
 
 const postHeaders = {
@@ -11,10 +12,11 @@ const postHeaders = {
 };
 
 export const LoginPage = () => {
-  const [email, setEmail] = useState('');
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [emailError, setEmailError] = useState('');
   const [passwordError, setPasswordError] = useState('');
+  const navigate = useNavigate();
 
   const validateEmail = (email: string) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -34,12 +36,12 @@ export const LoginPage = () => {
   };
 
   const handleLogin = () => {
-    validateEmail(email);
+    validateEmail(username);
     validatePassword(password);
 
     if (!emailError && !passwordError) {
       const body = {
-        email,
+        username,
         password,
       };
 
@@ -47,6 +49,7 @@ export const LoginPage = () => {
         .post('login', body, { headers: postHeaders })
         .then((response) => {
           console.log('login', response.data);
+          navigate('/userprofile');
         })
         .catch((error) => {
           console.error(error);
@@ -60,8 +63,8 @@ export const LoginPage = () => {
       <Input
         type="email"
         placeholder="Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
+        value={username}
+        onChange={(e) => setUsername(e.target.value)}
         onBlur={(e) => validateEmail(e.target.value)}
       />
       {emailError && <p>{emailError}</p>}

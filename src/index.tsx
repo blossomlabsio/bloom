@@ -6,6 +6,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import ErrorPage from './components/ErrorPage/main';
 import LoginPage from './components/LoginPage/main';
 import LandingPageBody from './components/LandingPageBody/main';
+import UserProfile from './components/UserProfile/main';
+import AboutPage from './components/AboutPage/main';
 
 const router = createBrowserRouter([
   {
@@ -20,6 +22,14 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <LandingPageBody />,
+      },
+      {
+        path: 'userprofile',
+        element: <UserProfile />,
+      },
+      {
+        path: 'about',
+        element: <AboutPage />,
       },
     ],
   },
