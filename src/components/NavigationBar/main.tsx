@@ -4,11 +4,6 @@ import { Button } from '../LoginPage/styled';
 import { useAuth } from '../../contexts/AuthContext';
 import { useNavigate } from 'react-router-dom';
 
-export interface NavigationBarProps {
-  isUserLoggedIn: boolean;
-  setIsUserLoggedIn: (isUserLoggedIn: boolean) => {};
-}
-
 export const NavigationBar = () => {
   const { isUserLoggedIn } = useAuth();
   const navigate = useNavigate();
