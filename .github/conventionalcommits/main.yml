@@ -1,21 +1,14 @@
-name: Testes
+name: Conventional Commits
 
-on: [pull_request, push]
+on:
+  pull_request:
+    branches: [main]
 
 jobs:
-  conventional-commits-checker:
+  build:
+    name: Conventional Commits
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
-      - name: Use Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: '12.x'
-      - run: cd .github/conventionalcommits && npm install
-      - run: cd .github/conventionalcommits && npm run build --if-present
-
-      - name: conventional-commits-checker
-        id: hello
-        uses: ./.github/conventionalcommits/
+      - uses: webiny/action-conventional-commits@v1.1.0
