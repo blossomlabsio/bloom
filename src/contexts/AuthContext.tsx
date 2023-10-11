@@ -59,7 +59,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     }
   };
 
-  const handleLogin = (username: string, password: string) => {
+  const handleLogin = async (username: string, password: string) => {
     validateEmail(username || '');
     validatePassword(password || '');
 
@@ -69,7 +69,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
         password,
       };
 
-      client
+      await client
         .post('login', body, { headers: postHeaders })
         .then((response) => {
           setIsUserLoggedIn(true);
@@ -81,7 +81,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     }
   };
 
-  const handleLogout = () => {
+  const handleLogout = async () => {
     if (isUserLoggedIn) {
       setIsUserLoggedIn(false);
       navigate('/');
