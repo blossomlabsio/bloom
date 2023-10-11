@@ -20,7 +20,9 @@ export const LoginPage = () => {
       {emailError && <p>{emailError}</p>}
       <Input type="password" placeholder="Password" ref={passwordRef} />
       {passwordError && <p>{passwordError}</p>}
-      <Button onClick={login}>Login</Button>
+      <Button onClick={login} type="submit">
+        Login
+      </Button>
     </LoginContainer>
   );
 };
