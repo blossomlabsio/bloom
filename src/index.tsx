@@ -1,14 +1,4 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import ErrorPage from './components/ErrorPage/main';
-import LoginPage from './components/LoginPage/main';
-import LandingPageBody from './components/LandingPageBody/main';
-import UserProfile from './components/UserProfile/main';
-import AboutPage from './components/AboutPage/main';
-import { AuthProvider } from '../src/contexts/AuthContext';
+
 
 const router = createBrowserRouter([
   {
