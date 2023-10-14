@@ -54,7 +54,7 @@ const Footer = () => {
           &copy; 2023 Bloom, All Rights Reserved.
         </AllRightsReserved>
         {SocialMediaLinks.map(({ name, href }) => (
-          <SocialMediaIcon key={href} href={href}>
+          <SocialMediaIcon key={href} href={href} target="_blank">
             <FontAwesomeIcon icon={name} />
           </SocialMediaIcon>
         ))}
