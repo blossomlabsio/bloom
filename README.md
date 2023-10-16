@@ -2,6 +2,10 @@
 # Bloom 🌺
 Bloom is a completely free and open source Call for Proposal (CFP) management tool that allows users to create and manage their CFPs for various events. Event organisers can use it for their events to review, accept and reject CFPs. They can also invite reviewers to review CFPs. This is the frontend repository for Bloom.
 
+## Contribute 
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/blossomlabsio/bloom.git)
+
+
 ## Pre-requisites
 
 - Nodejs
