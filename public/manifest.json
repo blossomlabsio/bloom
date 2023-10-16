@@ -1,6 +1,6 @@
 {
-  "short_name": "BLOSSOMLAB",
-  "name": "Free BLOSSOMLAB App",
+  "short_name": "Bloom",
+  "name": "Bloom - A self hosted CFP portal",
   "icons": [
     {
       "src": "logo64.png",
