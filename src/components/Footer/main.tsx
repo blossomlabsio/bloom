@@ -30,7 +30,7 @@ const Footer = () => {
           </TitleP>
         </Title>
         <Socials>
-          <a href="">
+          <a href="/">
             <Svg
               xmlns="http://www.w3.org/2000/svg"
               width="29"
@@ -58,7 +58,7 @@ const Footer = () => {
               />
             </Svg>
           </a>
-          <a href="">
+          <a href="/">
             <Svg
               xmlns="http://www.w3.org/2000/svg"
               width="30"
