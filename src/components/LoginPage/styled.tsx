@@ -11,6 +11,8 @@ export const GlobalStyles = createGlobalStyle`
 export const MainBody = styled.div`
   display: flex;
   height: 75vh;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const Left = styled.div`
