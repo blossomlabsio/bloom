@@ -5,11 +5,8 @@ export const Right = styled.div`
   padding: 10px 70px;
 
   @media only screen and (max-width: 600px) {
-    background: url(${process.env.PUBLIC_URL + '/assets/bloomBGI.svg'})
-      no-repeat;
-
-    background-size: cover;
     width: 100vw;
+    padding: 10px 40px;
   }
   @media only screen and (min-width: 601px) and (max-width: 768px) {
     padding: 50px 20px;

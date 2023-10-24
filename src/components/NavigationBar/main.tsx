@@ -6,7 +6,7 @@ import {
   LoginBtn,
 } from './styled';
 import Logo from '../Logo/main';
-import { Button } from '../LoginPage/styled';
+// import { Button } from '../LoginPage/styled';
 import { useAuth } from '../../contexts/AuthContext';
 import { useNavigate } from 'react-router-dom';
 
