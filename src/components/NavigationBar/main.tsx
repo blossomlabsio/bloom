@@ -1,4 +1,10 @@
-import { NavbarContainer, NavigationLink, NavItem, NavList } from './styled';
+import {
+  NavbarContainer,
+  NavigationLink,
+  NavItem,
+  NavList,
+  LoginBtn,
+} from './styled';
 import Logo from '../Logo/main';
 import { Button } from '../LoginPage/styled';
 import { useAuth } from '../../contexts/AuthContext';
@@ -25,9 +31,9 @@ export const NavigationBar = () => {
         ))}
         <NavItem>
           {isUserLoggedIn ? (
-            <Button onClick={() => navigate('/')}>Logout</Button>
+            <LoginBtn onClick={() => navigate('/')}>Logout</LoginBtn>
           ) : (
-            <Button onClick={() => navigate('login')}> Login </Button>
+            <LoginBtn onClick={() => navigate('login')}> Login </LoginBtn>
           )}
         </NavItem>
       </NavList>
