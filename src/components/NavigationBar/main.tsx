@@ -11,13 +11,6 @@ import { Button } from '../LoginPage/styled';
 import { useAuth } from '../../contexts/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import React, { useState } from 'react';
-import {
-  FontAwesomeIcon,
-  FontAwesomeIconProps,
-} from '@fortawesome/react-fontawesome';
-import { fa1, faBars } from '@fortawesome/free-solid-svg-icons';
-import { icon } from '@fortawesome/fontawesome-svg-core';
-import { IconName, IconPrefix } from '@fortawesome/fontawesome-svg-core';
 
 interface Props {
   toggleMenu: () => void;
