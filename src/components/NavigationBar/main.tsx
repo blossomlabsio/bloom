@@ -46,7 +46,7 @@ export const NavigationBar = () => {
           {isUserLoggedIn ? (
             <Button onClick={() => navigate('/')}>Logout</Button>
           ) : (
-            <Button onClick={() => navigate('login')}> Login </Button>
+            <Button onClick={() => navigate('login')}> Login</Button>
           )}
         </NavItem>
       </NavList>
