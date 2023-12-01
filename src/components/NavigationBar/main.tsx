@@ -1,8 +1,27 @@
-import { NavbarContainer, NavigationLink, NavItem, NavList } from './styled';
+import {
+  FloatingMenu,
+  Hamburger,
+  NavbarContainer,
+  NavigationLink,
+  NavItem,
+  NavList,
+} from './styled';
 import Logo from '../Logo/main';
 import { Button } from '../LoginPage/styled';
 import { useAuth } from '../../contexts/AuthContext';
 import { useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
+import {
+  FontAwesomeIcon,
+  FontAwesomeIconProps,
+} from '@fortawesome/react-fontawesome';
+import { fa1, faBars } from '@fortawesome/free-solid-svg-icons';
+import { icon } from '@fortawesome/fontawesome-svg-core';
+import { IconName, IconPrefix } from '@fortawesome/fontawesome-svg-core';
+
+interface Props {
+  toggleMenu: () => void;
+}
 
 export const NavigationBar = () => {
   const { isUserLoggedIn } = useAuth();
@@ -14,15 +33,30 @@ export const NavigationBar = () => {
     { route: '/contact', text: 'Contact' },
   ];
 
+  const [showMenu, setShowMenu] = useState(false);
+
+  const toggleMenu = () => {
+    console.log(showMenu);
+    setShowMenu(!showMenu);
+  };
+
+  const HamburgerIcon: React.FC<Props> = ({ toggleMenu }) => {
+    return <div onClick={toggleMenu}></div>;
+  };
+
   return (
     <NavbarContainer>
       <Logo src="https://i.ibb.co/2dBJqd6/4388667.png" alt="bloom-logo" />
+
       <NavList>
         {navLinks.map((link, index) => (
           <NavItem key={index}>
             <NavigationLink to={link.route}>{link.text}</NavigationLink>
           </NavItem>
         ))}
+        <span
+          style={{ backgroundColor: 'white', width: '1px', height: '3rem' }}
+        ></span>
         <NavItem>
           {isUserLoggedIn ? (
             <Button onClick={() => navigate('/')}>Logout</Button>
@@ -31,6 +65,29 @@ export const NavigationBar = () => {
           )}
         </NavItem>
       </NavList>
+
+      <Hamburger
+        onClick={toggleMenu}
+        className={showMenu ? 'fa-regular fa-circle-xmark' : 'fa-solid fa-bars'}
+      />
+
+      {showMenu && (
+        <FloatingMenu>
+          {/* Add your expanded menu items here */}
+          {navLinks.map((link, index) => (
+            <NavItem key={index}>
+              <NavigationLink to={link.route}>{link.text}</NavigationLink>
+            </NavItem>
+          ))}
+          <NavItem>
+            {isUserLoggedIn ? (
+              <Button onClick={() => navigate('/')}>Logout</Button>
+            ) : (
+              <Button onClick={() => navigate('login')}> Login </Button>
+            )}
+          </NavItem>
+        </FloatingMenu>
+      )}
     </NavbarContainer>
   );
 };
