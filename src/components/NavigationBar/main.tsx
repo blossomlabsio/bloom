@@ -10,11 +10,7 @@ import Logo from '../Logo/main';
 import { Button } from '../LoginPage/styled';
 import { useAuth } from '../../contexts/AuthContext';
 import { useNavigate } from 'react-router-dom';
-import React, { useState } from 'react';
-
-interface Props {
-  toggleMenu: () => void;
-}
+import { useState } from 'react';
 
 export const NavigationBar = () => {
   const { isUserLoggedIn } = useAuth();
@@ -31,10 +27,6 @@ export const NavigationBar = () => {
   const toggleMenu = () => {
     console.log(showMenu);
     setShowMenu(!showMenu);
-  };
-
-  const HamburgerIcon: React.FC<Props> = ({ toggleMenu }) => {
-    return <div onClick={toggleMenu}></div>;
   };
 
   return (
