@@ -26,6 +26,7 @@ export const NavList = styled.ul`
   justify-content: center;
   padding: 0;
   margin-left: auto;
+  align-items: center;
 `;
 export const NavItem = styled.li`
   margin: 0 10px;
